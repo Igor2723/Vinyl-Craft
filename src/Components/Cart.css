@@ -6,6 +6,8 @@
     margin: 10rem auto;
     border: 7px double #284766;
     gap: 5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 #cart-items {
     display: flex;
@@ -26,6 +28,9 @@
 .quantity-container {
     display: inline-flex;
     gap: 1rem;
+}
+.quantity-container p {
+  color: #917A51;
 }
 .item-quantity{
     width: 3rem;
@@ -64,4 +69,32 @@
   .remove-all:hover {
     cursor: pointer;
     background-color: #E6DED1;
+  }
+  @media only screen and (max-width: 940px) {
+    #cart-items li{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    .total, .total-value {
+      font-size: 1.6rem;
+    }
+  }
+  @media only screen and (max-width: 680px) {
+    .price-btn-container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .total{
+      align-self: center;
+      margin-top: 2rem;
+      line-height: 2.5rem;
+    }
+    .quantity-container {
+      display: flex;
+      flex-direction: column;
+  }
   }
