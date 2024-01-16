@@ -4,25 +4,25 @@ import { Link } from "react-router-dom";
 import { addItem } from '../features/cart/cartSlice.js';
 import { useDispatch } from 'react-redux';
 
-export default function Product({img, name, price, newprice, onsale}) {
+export default function Product({filteredAndSortedList}) {
     const dispatch = useDispatch();
     const onClickHandler = (item) => {
     dispatch(addItem(item));
   };
     return (
         <>
-           
+            {filteredAndSortedList.map(item => (
             <div className="products-card">
-                <Link to={`/product/productpage/${name}`}><img src={img}/></Link>
+                <Link to={`/product/productpage/${item.name}`}><img src={item.img}/></Link>
                 <div className="name-price-tag">
                     <div className="price-container">
-                        <p className="name">{name}</p>
-                        {onsale === true ?
+                        <p className="name">{item.name}</p>
+                        {item.onsale === true ?
                             <div className="price-newprice">
-                            <span className="price">$<del>{price}</del></span>
-                            <span className="price">${newprice}</span>
+                            <span className="price">$<del>{item.price}</del></span>
+                            <span className="price">${item.newprice}</span>
                             </div>
-                            : <span className="price">${price}</span>
+                            : <span className="price">${item.price}</span>
                         }
                     </div>
                     <button
@@ -31,10 +31,10 @@ export default function Product({img, name, price, newprice, onsale}) {
                         >
                             Add to Cart
                         </button>
-            </div>   
-        </div>
+                </div>   
+            </div>
           
-                
+          ))}  
         </>
     )        
 }
