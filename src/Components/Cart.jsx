@@ -50,7 +50,7 @@ export default function Cart() {
           <h3 className="total">
             Total{' '}
             <span className="total-value">
-              {total} 
+              ${total} 
             </span>
           </h3>
         </div>
