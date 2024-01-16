@@ -116,9 +116,7 @@ export default function VinylClocks() {
             </form>
           </div>
             <div className="products">
-            {currentItems.map((item, id) => (
-            <Product {...item} key={id} />
-          ))}
+            <Product filteredAndSortedList={currentItems}/>
               </div>
         </div>
         <Pagination
