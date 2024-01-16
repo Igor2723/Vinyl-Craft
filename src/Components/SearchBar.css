@@ -1,0 +1,41 @@
+
+.search-form {
+  margin: 5rem auto;
+}
+  
+  .search-input[type=text] {
+    width: 40rem;
+    padding: .8rem;
+    font-size: 17px;
+    border: 7px double #6A88A6;;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  textarea:focus, input:focus{
+    outline: none;
+    background-color: #E8F0FE;
+  }
+  .search-clear-button {
+    font-size: 17px;
+    background-color: transparent;
+    border: none;
+    margin-left: -3rem;
+  }
+  .search-clear-button:hover {
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 410px) {
+    input[type=text] {
+        width: 17rem;
+    }
+  }
+  @media only screen and (max-width: 350px) {
+    input[type=text] {
+        width: 15rem;
+    }
+  }
+  @media only screen and (max-width: 320px) {
+    .search-form {
+        display: none;
+    }
+  }

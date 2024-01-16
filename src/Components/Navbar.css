@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Diplomata&family=Jacques+Francois+Shadow&family=The+Nautigal:wght@700&display=swap');
+header {
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 5.5rem;
+    z-index: 12;
+    border-bottom: 3px double #284766;
+}
+.active {
+    color: #917A51;
+    border-bottom: 3px double #917A51;
+}
+.logo{
+   width: 9rem;
+   transition: 5.2 ;
+}
+.logo:hover{
+    cursor: pointer;
+    transform: rotateY(360deg);
+ }
+header nav {
+    display: inline-flex;
+    gap:2.5rem;
+    font-family: 'Jacques Francois Shadow', serif;
+} 
+.navLink {
+    margin: 0 1rem;
+    color: #284766;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+.cart-quantity {
+    font-size: 1.2rem;
+    margin-left: 10px;
+    color: #284766;
+    font-family: 'Roboto', sans-serif;
+}
+nav a:hover {
+    color: #917950; 
+}
+
+header .nav-btn {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: none;
+    opacity: 0;
+    font-size: 1.8rem;
+}
+header .nav-btn:hover {
+    transform: scale(1.3);
+    transition: .27s ease-in-out;
+}
+header .nav-open {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+}
+header div,
+nav {
+    display: flex;
+    align-items: center;
+}
+.contact {
+	margin: 1rem;
+	display: inline-flex;
+	gap: .5rem;
+}
+.contact a {
+    color: #E6DED1;
+}
+.contact a:hover {
+    color: #917950;
+}
+.new-sign {
+    width: 2rem;
+    margin-top: -3rem;
+}
+
+
+@media only screen and (max-width: 1220px) {
+.contact {
+    display: none;
+}
+}
+
+@media only screen and (max-width: 1135px) {
+    header .nav-btn {
+        display: block;
+        opacity: 1;
+    }
+
+    header nav {
+        position: fixed;
+        top: 0;
+        left: -200vh;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5.5rem;
+        background-color: #D1DBE6;
+        transition: .4s ease-in-out;
+        z-index: 1;
+    }
+
+    header .responsive_nav {
+        transform: translateX(200vh);
+    }
+
+    nav .nav-close-btn {
+        position: absolute;
+        top: 2rem;
+        right: 1.5rem;
+    }
+
+    nav a {
+        font-size: 1.3rem;
+    }
+    .contact {
+        display: none;
+    }
+    .dropdown:hover .dropdown-content {display: none;}
+}
+
+
+
+
+
+
+/*.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+	font-size: 1.2rem;
+    font-family: 'Jacques Francois Shadow', serif;
+}
+
+.logo {
+    border: 3px double #216363;
+    border-radius: 50%; 
+    padding: .5rem;
+    color: #8E6147;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #216363;
+    padding: 1.8rem;
+    transition: .13s;
+}
+
+.navbar-links li a:hover {
+    color: #8E6147;
+}
+.cart {
+    font-size: 1.5rem;
+    color:#216363;
+}
+.cart:hover {
+    color:#8E6147;
+}
+.contact {
+	margin: 1rem;
+	display: inline-flex;
+	gap: .5rem;
+}
+.contact a {
+    color: #216363;
+}
+.contact a:hover {
+    color: #8E6147;
+}
+.toggle-button {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    display: none;
+    font-size: 1.7rem;
+}
+.toggle-button:hover {
+    font-size: 2rem;
+    transition: .3s;
+}
+
+@media only screen and (max-width: 1135px) {
+    .contact {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 1034px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+        margin: 5rem 0 3rem 0;
+    }
+
+    .navbar-links ul {
+		height: 100vh;
+        width: 100%;
+		justify-content: center;
+        flex-direction: column;
+		gap: 8rem;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}*/

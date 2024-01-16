@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Diplomata&family=Roboto&family=The+Nautigal:wght@700&display=swap');
+
+.contact-title {
+    margin: 10rem auto;
+    text-align: center;
+    display: block;
+    line-height: 3.5rem;
+    font-size: 1.7rem;
+    font-family: 'Diplomata', serif;
+    color: #917A51;
+}
+.form-container {
+    background: url("../assets/contactformbckg.jpg") no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    box-shadow: 5px 10px 10px 5px #A6A6A6;
+    width: 90%;
+    padding: 1.3rem;
+    margin: 0 auto;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+}
+.form-control[type=text] {
+    width: 30rem;
+    padding: .8rem;
+    margin: 1rem auto;
+    font-size: 17px;
+    opacity: .8;
+    border: none;
+    border-radius: 10px;
+    border: 7px double #6A88A6;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  #textArea {
+    width: 37rem;
+    opacity: .8;
+    margin: 1rem auto;
+    display: inline-block;
+    border: 7px double #6A88A6;
+    border-radius: 10px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 1.2em;
+    font-weight: 700;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+  }
+  .submit-form {
+      margin: 1rem auto;
+      border: 7px double #6A88A6;
+      border-radius: 1rem;
+      color: #E6DED1 ;
+      background-color: #284766;
+      padding: 15px;
+      width: 12rem;
+      text-align: center;
+      font-size: 1.3rem;
+      font-family: 'Diplomata', serif;
+      cursor: pointer;
+  }
+  .submit-form:hover {
+    background-color: #6A88A6;
+    border: 7px double #284766;
+  }
+
+  @media only screen and (max-width: 705px) {
+    .form-control[type=text] {
+      width: 80%;
+    }
+    #textArea {
+      width: 90%;
+    }
+    .submit-form {
+      padding: 12px;
+    }
+  }
+
+  @media only screen and (max-width: 475px) {
+    .form-control[type=text] {
+      width: 80%;
+    }
+    #textArea {
+      width: 90%;
+    }
+    .submit-form {
+      padding: 7px;
+      font-size: 1.1rem;
+    }
+  }
+  @media only screen and (max-width: 385px) {
+    .form-control[type=text] {
+      width: 80%;
+    }
+    #textArea {
+      width: 90%;
+    }
+    .submit-form {
+      padding: 7px;
+      font-size: .9rem;
+      width: 8rem;
+    }
+  }

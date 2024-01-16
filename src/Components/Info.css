@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Diplomata&family=Jacques+Francois+Shadow&family=Roboto&family=The+Nautigal:wght@700&display=swap');
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100vw;
+    text-align: center;
+}
+.info-container h4 {
+    width: 100%;
+    background-color: #284766;
+    padding: 0 2rem 0 2rem;
+    font-size: 2.5rem;
+    font-family: 'The Nautigal', cursive;
+    margin-top: 3rem;
+    color: #917A51;
+    line-height: 4rem;
+}
+.info-container h4 a {
+    text-decoration: none ;
+    color: #E6DED1;
+}
+
+.info-title {
+    font-size: 1rem;
+    font-family: 'Diplomata', serif;
+    margin-top: 10rem;
+    color: #284766;
+}
+.info-container h4 a:hover {
+    text-decoration: underline;
+    color: #6A88A6;
+}
+.info-banner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 7rem;
+    width: 100vw;
+}
+.shipping, .payment  {
+    font-size: 2rem;
+}
+h6 {
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 3rem;
+    color: #284766;
+}
+.card-img {
+    width: 3.5rem;
+    margin-top: 1.5rem;
+}
+.info-container iframe {
+    width: 17rem;
+    height: 17rem;
+    margin: 7rem 0 10rem 0;
+}
+
+@media only screen and (max-width: 848px) {
+    .info-container h4 {
+        font-size: 2.3rem;
+    }
+}
+@media only screen and (max-width: 690px) {
+    .info-banner {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 7rem;
+    }
+}
+@media only screen and (max-width: 540px) {
+    .info-container iframe {
+        width: 10rem;
+        height: 10rem;
+    }
+}
+@media only screen and (max-width: 313px) {
+    .info-container h4 {
+        font-size: 2rem;
+    }
+    .info-container iframe {
+        width: 7rem;
+        height: 7rem;
+    }
+    .shipping, .payment  {
+        font-size: 1.5rem;
+    }
+    .card-img {
+        width: 2.5rem;
+        margin-top: 1.5rem;
+    }
+}

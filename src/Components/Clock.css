@@ -1,0 +1,88 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.clock {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    background-image: url("../assets/batmanclock.png");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 1rem;
+    right: 3rem;
+}
+  .clock .hand {
+    --rotation: 0;
+    position: absolute;
+    bottom: 53%;
+    left: 50%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  }
+  .clock::after {
+    content: '';
+    position: absolute;
+    background-color: #E6DED1;
+    z-index: 11;
+    width: 9px;
+    height: 9px;
+    top: 46.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+  
+  .clock .hand.second {
+    width: 3px;
+    height: 19.5%;
+    background-color: #A62934;
+    border: none
+  }
+  
+  .clock .hand.minute {
+    width: 5px;
+    height: 15.5%;
+    background-color: #E6DED1;
+  }
+  
+  .clock .hand.hour {
+    width: 5px;
+    height: 10%;
+    border: none;
+    background-color: #E6DED1;
+  }
+  @media only screen and (max-width: 1170px) {
+    .clock {
+        top: 2rem;
+        left: 0;
+        width: 23rem;
+        height: 23rem;
+      }
+  }
+  @media only screen and (max-width: 410px) {
+    .clock {
+        width: 20rem;
+        height: 20rem;
+    }
+   
+  }
+  
+  @media only screen and (max-width: 320px) {
+    .clock {
+        width: 17rem;
+        height: 17rem;
+    }
+  }
+  @media only screen and (max-width: 317px) {
+    .clock {
+      max-width: 14rem;
+      max-height: 14rem;
+    }
+  }

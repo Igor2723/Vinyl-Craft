@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Diplomata&family=The+Nautigal:wght@700&display=swap');
+
+
+main {
+    background: url("../assets/roomwallportrait.jpg") no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    padding: 0;
+}
+
+ .banner-one {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: 'Diplomata', serif;
+  text-align: center;
+  color: #284766;
+  margin: 10rem 0 5rem 1.5rem;
+ }
+ h1 {
+  font-size: 2.5rem;
+  letter-spacing: .9rem;
+  margin-bottom: 7rem;
+  text-shadow: 12px 12px 15px grey;
+ }
+ span {
+  font-size: 5.5rem;
+  color: #917950;
+}
+.shopbtn {
+  padding: 1rem;
+  width: 12.5rem;
+  border-radius: 12px;
+  border: 7px double #6A88A6;
+  background-color: #FFFFFF;
+  
+  font-size: 2rem;
+  font-family: 'Diplomata', serif;
+  transition: transform .2s ease-in-out;
+  margin: 5rem 2.5rem 0 0;
+  
+}
+.shopbtn a{
+  text-decoration: none;
+  color: #6A88A6;
+}
+.shopbtn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.banner-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 7rem;
+ }
+ .message {
+  font-size: 3rem;
+  font-family: 'The Nautigal', cursive;
+  color: #284766;
+  margin: -3rem 8rem 15rem 0;
+  text-shadow: 12px 12px 15px grey;
+}
+@media only screen and (max-width: 1342px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+  
+}
+@media only screen and (max-width: 1203px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 1170px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+  h1 {
+    display: none;
+  }
+  .banner-one {
+    margin: auto;
+  }
+  .banner-two {
+    max-width: 100%;
+    text-align: center;
+    gap: 4rem;
+  }
+  .message {
+    margin-left: 7.7rem;
+    font-size: 2.5rem;
+  }
+  .shopbtn {
+    padding: 1rem;
+    margin: -4rem 0 6rem 0;
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (max-width: 410px) {
+  .message {
+    font-size: 2rem;
+  } 
+  .shopbtn {
+      padding: .7rem;
+      width: 10.5rem;
+      font-size: 1.5rem;
+    }
+ 
+}
+
+@media only screen and (max-width: 320px) {
+  .shopbtn {
+    padding: .5rem;
+    width: 8.5rem;
+    font-size: 1.2rem;
+  }
+}

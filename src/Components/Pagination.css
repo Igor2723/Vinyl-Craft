@@ -1,0 +1,23 @@
+.pagination-container {
+    display: flex;
+    margin: 5rem auto;
+}
+.pagination {
+    display: inline-flex;
+    gap: 2rem;
+}
+.page-item {
+    list-style: none;
+    font-size: 1.3rem;
+    border: 3px double #917A51;
+    padding: .5rem;
+}
+.page-item:hover {
+    background-color: #D1DBE6;
+    cursor: pointer;
+}
+
+.page-link {
+    text-decoration: none;
+    color: #284766;
+}

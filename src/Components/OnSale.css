@@ -1,0 +1,77 @@
+
+.onsale-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+    margin: 7rem auto;
+    width: 100vw;
+    background-color: #F2F2F2;
+    box-shadow: 5px 0 10px 0 #A6A6A6;
+  }
+.onsale-container :first-child {
+  grid-column: 1 / -1;
+}
+.onsale-container h3 {
+  font-size: 1.2rem;
+  color: #284766;
+  font-family: 'Diplomata', serif;
+  border-top: 5px double #6A88A6;
+  border-bottom: 5px double #6A88A6;
+  line-height: 3rem;
+  margin-top: 2rem;
+}
+  .onsale {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 5rem 0 2rem 0;
+    gap: .3rem;
+  }
+  .onsale:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: .25s ease-in-out;
+  }
+
+  .onsale img {
+    width: 50%;
+    border: 7px double #6A88A6; 
+  }
+  .price {
+    font-size: 1.7rem;
+    position: relative;
+    color: #917A51;
+  }
+  @media only screen and (max-width: 1261px) {
+    .onsale-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .onsale img {
+      width: 70%; 
+      }
+
+  }
+  @media only screen and (max-width: 765px) {
+    .onsale-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+  .onsale img {
+    width: 60%; 
+    }
+    .onsale-container h3 {
+      font-size: 1rem;
+  }
+}
+  @media only screen and (max-width: 434px) {
+    .onsale-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .onsale img {
+      width: 70%; 
+    }
+  }

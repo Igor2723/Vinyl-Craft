@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Diplomata&family=Roboto&family=The+Nautigal:wght@700&display=swap');
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10rem auto;
+}
+.about-banner {
+    display: flex;
+    width: 80%;
+    background: url("../assets/vinylbackground.jpg") no-repeat center;
+    background-size: cover;
+    height: 20rem;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 5px 10px 10px 5px #A6A6A6;
+}
+.about-banner h1 {
+    color: #E6DED1;
+    display: block;
+    margin: auto;
+    font-family: 'Diplomata', serif;
+    font-size: 2rem;
+}
+.about-txt {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+    border-bottom: 5px double #6A88A6;
+    padding: 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    margin-top: 3rem;
+    line-height: 2rem;
+    color: #284766;
+}
+.about-txt h2 {
+    margin-bottom: 2rem;
+    color: #917A51;
+}
+.v {
+    font-size: 2rem;
+    font-family: 'Diplomata', serif;
+}
+.vca-title {
+    color: #917A51;
+    font-size: 1.1rem;
+}
+.span-wood {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #284766;
+}
+.span-wood:hover {
+    cursor: pointer;
+    border-bottom: 3px double #6A88A6;
+}
+.span-custom {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #917A51;
+}
+.span-custom:hover {
+    cursor: pointer;
+    border-bottom: 3px double #917A51;
+}
+.about-team {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto;
+    width: 60%;
+    line-height: 5rem;
+}
+.about-team h2 {
+    color: #917A51;
+    font-family: 'Roboto', sans-serif;
+}
+.avatar-container {
+    display: inline-flex;
+    gap: 10rem;
+    flex-wrap: wrap;
+    margin: 5rem auto;
+}
+.avatar-img {
+    display: block;
+    margin:auto;
+    text-align: center;
+    align-items: center;
+    font-family: 'The Nautigal', cursive;
+    font-size: 2.5rem;
+}
+.avatar {
+    width: 10rem;
+}
+.avatar-img h6 {
+    margin-top: -2rem;
+}
+
+@media only screen and (max-width: 391px) {
+    .about-banner h1 {
+        font-size: 1.5rem;
+    }
+    .about-container {
+        text-align: center;
+        text-wrap: wrap;
+    }
+}

@@ -1,0 +1,27 @@
+.sort-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    font-size: 1.3rem;
+    margin: 0  0 1rem 0;
+    color: #917A51;
+}
+.sort-container {
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .sort-title {
+    display: inline-flex;
+    gap: .5rem;
+  }
+ 
+select:hover {
+    cursor: pointer;
+    color: #6A88A6;
+}
+select:focus {
+    outline: none;
+}
+
+  
