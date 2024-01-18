@@ -3,6 +3,7 @@ import { inventoryData } from "./data";
 import "./OnSale.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faPercent} from '@fortawesome/free-solid-svg-icons';
+import { Link } from "react-router-dom";
 
 
 export default function OnSale() {
@@ -11,7 +12,7 @@ export default function OnSale() {
 
   const productsOnsale = filterOnsale.map(product =>
     <div className="onsale" key={product.id}> 
-      <img src={product.img} alt="" />
+      <Link to={`/product/productpage/${product.name}`}><img src={product.img} alt="" /></Link>
       <p className="name">{product.name}</p>
       <span className="price"><del>${product.price}</del></span>
       <span className="price">${product.newprice}</span>
