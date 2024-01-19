@@ -25,7 +25,8 @@ export default function Product({filteredAndSortedList}) {
                             : <span className="price">${item.price}</span>
                         }
                     </div>
-                    <button
+                    <button 
+                             type="button"
                             onClick={() => onClickHandler(item)}
                             className="addToCart"
                         >
