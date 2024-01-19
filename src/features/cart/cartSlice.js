@@ -40,25 +40,21 @@ export const addItem = (itemToAdd) => {
           [name]: newItem 
         };
       }
-      case 'cart/removeItem':
-        return cart.filter(item => item !== action.payload);
         
       case 'cart/removeAll':
         return initialCart;
 
-      case 'cart/changeItemQuantity': {
-        const { name, newQuantity } = action.payload;
-        const itemToUpdate = cart[name];
-        const updatedItem = {
-          ...itemToUpdate,
-          quantity: newQuantity
+        case 'cart/changeItemQuantity': {
+          const { name, newQuantity } = action.payload;
+        
+          return {
+            ...cart,
+            [name]: {
+              ...cart[name],
+              quantity: Math.max(0, newQuantity),
+            } 
+          }
         }
-        // Create a copy of itemToUpdate and update the quantity prop.
-        return {
-          ...cart,
-          [name]: updatedItem 
-        }
-      }
       default: {
         return cart;
       }
