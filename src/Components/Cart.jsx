@@ -14,10 +14,6 @@ export default function Cart() {
   const cart = useSelector(state => state.cart); // * Note
 
   const onInputChangeHandler = (name, input) => {
-    // If the user enters a bad value...
-    if (input === '') {
-      return;
-    }
 
     // Otherwise, convert the input into a number and pass it along as the newQuantity.
     const newQuantity = Number(input);
