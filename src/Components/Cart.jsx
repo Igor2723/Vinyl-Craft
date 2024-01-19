@@ -3,15 +3,16 @@ import "./Cart.css";
 import Navbar from './Navbar.jsx';
 import Footer from './Footer.jsx';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeItemQuantity } from '../features/cart/cartSlice.js';
+import {
+  changeItemQuantity,
+  removeAll
+} from '../features/cart/cartSlice.js';
 import { calculateTotal } from '../features/utilities/utilities.js';
-import { removeAll } from '../features/cart/cartSlice.js';
 
 export default function Cart() {
-
   const dispatch = useDispatch();
   const cart = useSelector(state => state.cart); // * Note
-  
+
   const onInputChangeHandler = (name, input) => {
     // If the user enters a bad value...
     if (input === '') {
@@ -19,29 +20,67 @@ export default function Cart() {
     }
 
     // Otherwise, convert the input into a number and pass it along as the newQuantity.
-   const newQuantity = Number(input);
+    const newQuantity = Number(input);
 
     dispatch(changeItemQuantity(name, newQuantity));
-
   };
 
-  const onRemoveAll = () => {
+  const onRemoveAll = () => dispatch(removeAll());
+  const incrementItem = (name, item) => dispatch(
+    changeItemQuantity(name, item.quantity + 1)
+  );
+  const decrementItem = (name, item) => dispatch(
+    changeItemQuantity(name, item.quantity - 1)
+  );
 
-    dispatch(removeAll());
-  };
-  // Use the cart and currencyFilter slices to render their data.
-  const cartElements = Object.entries(cart).map(createCartItem);
-  const total = calculateTotal(cart);
+  function createCartItem([name, item]) {
+    return (
+      <li className="cart-list" key={name}>
+        <img src={item.img}/>
+        <p>{name}</p>
+        <p>{item.type}</p>
+        <p className="quantity">Quantity:</p>
+          <div className="input-btn-container">
+            <button className="inc-dec" type="button" onClick={decrementItem.bind(null, name, item)}>
+              -
+            </button>
+            <input 
+              type="number" 
+              className="item-quantity" 
+              name="quantity"
+              value={item.quantity}
+              onChange={(e) => {
+                onInputChangeHandler(name, e.target.value);
+              }}
+            />
+            <button className="inc-dec" type="button" onClick={incrementItem.bind(null, name, item)}>
+              +
+            </button>
+          </div>
+      </li>
+    );
+  }
   
+  // Use the cart and currencyFilter slices to render their data.
+  const cartElements = Object.entries(cart)
+    .filter(([,item]) => item.quantity)
+    .map(createCartItem);
+
+  const total = calculateTotal(cart);
+
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <div id="cart-container">
-        <ul id="cart-items">
-          {cartElements == '' ? <div className="cart-empty">Your cart is empty</div> : cartElements}
-        </ul>
+        {cartElements.length
+          ? (
+            <ul id="cart-items">
+              {cartElements}
+            </ul>
+          ) : <div className="cart-empty">Your cart is empty</div>
+        }
         <div className="price-btn-container">
-          {cartElements.length > 0 ? <button
+        {cartElements.length > 0 ? <button
               onClick={() => onRemoveAll()}
               className="remove-all"
             >
@@ -55,32 +94,7 @@ export default function Cart() {
           </h3>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
-
-  function createCartItem([name, item]) {
-    if (item.quantity === 0) {
-      return;
-    }
-
-    return (
-      <li className="cart-list" key={name}>
-        <img src={item.img}/>
-        <p>{name}</p>
-        <p>{item.type}</p>
-        <div className="quantity-container">
-          <p>Quantity:</p>
-          <input 
-          type="number" 
-          className="item-quantity" 
-          name="quantity" 
-          value={item.quantity}
-          onChange={(e) => {
-            onInputChangeHandler(name, e.target.value);
-          }}/>
-        </div>
-      </li>
-    );
-  }
 };
