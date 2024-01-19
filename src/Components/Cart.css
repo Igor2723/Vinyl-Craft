@@ -21,9 +21,11 @@
     border-bottom: 3px double #284766;
     padding: .5rem;
 }
-
+.cart-list {
+  font-size: 1.2rem;
+}
 .cart-list img {
-    width: 5rem;
+    width: 10rem;
 }
 
 .quantity {
