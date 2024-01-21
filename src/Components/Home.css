@@ -54,6 +54,9 @@ main {
   cursor: pointer;
   transform: scale(1.1);
 }
+.shopbtn:active{
+  background-color: #D1DBE6;
+}
 .banner-two {
   display: flex;
   flex-direction: column;
