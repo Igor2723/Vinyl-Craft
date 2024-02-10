@@ -31,7 +31,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 60%;
+    text-align: center;
+    text-align: justify;
+    width: 70%;
     border-bottom: 5px double #6A88A6;
     padding: 1rem;
     font-family: 'Roboto', sans-serif;
@@ -112,5 +114,8 @@
     .about-container {
         text-align: center;
         text-wrap: wrap;
+    }
+    .about-txt {
+        width: 80%;
     }
 }
